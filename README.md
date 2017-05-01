@@ -16,11 +16,11 @@ Useful git terminal commands:
 
 - git clone https://github.com/thewolfteam/TWT-Playground.git #clones a repo (https)
 - git branch #list of all branches
-- git branch <name> #create a new branch locally
-- git checkout <branchname> #switch over to another branch
-- git add <filename> #adds a file to staging area (if i remember this name correct)
+- git branch NAME #create a new branch locally
+- git checkout BRANCHNAME #switch over to another branch
+- git add FILENAME #adds a file to staging area (if i remember this name correct)
 - git commit -m "message" #everything in the staging area will be commited locally
-- git push origin <branchname> #this pushes everything to a branch
+- git push origin BRANCHNAME #this pushes everything to a branch
 
 # Install script
 
