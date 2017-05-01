@@ -1484,6 +1484,13 @@ static void CG_RegisterSounds( void ) {
 	cgs.media.satchelbounce1 =		trap_S_RegisterSound( "sound/weapons/satchel/satchel_bounce.wav", qfalse );
 	cgs.media.landminebounce1 =		trap_S_RegisterSound( "sound/weapons/landmine/mine_bounce.wav", qfalse );
 
+	cgs.media.kirbyswitchsound1 = 	trap_S_RegisterSound( "sound/weapons/kirbyfaust/kirbyhello1.wav", qfalse );
+	cgs.media.kirbyswitchsound2 = 	trap_S_RegisterSound( "sound/weapons/kirbyfaust/kirbyhello2.wav", qfalse );
+	cgs.media.kirbyswitchsound3 = 	trap_S_RegisterSound( "sound/weapons/kirbyfaust/kirbyhello3.wav", qfalse );
+	cgs.media.kirbyswitchsound4 = 	trap_S_RegisterSound( "sound/weapons/kirbyfaust/kirbyhello4.wav", qfalse );
+	cgs.media.kirbyswitchsound5 = 	trap_S_RegisterSound( "sound/weapons/kirbyfaust/kirbyhello5.wav", qfalse );
+	cgs.media.kirbyswitchsound6 = 	trap_S_RegisterSound( "sound/weapons/kirbyfaust/kirbyhello6.wav", qfalse );
+
 	cgs.media.watrInSound =			trap_S_RegisterSound( "sound/player/water_in.wav", qfalse );
 	cgs.media.watrOutSound =		trap_S_RegisterSound( "sound/player/water_out.wav", qfalse );
 	cgs.media.watrUnSound =			trap_S_RegisterSound( "sound/player/water_un.wav", qfalse );

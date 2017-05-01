@@ -3333,7 +3333,33 @@ void CG_PlaySwitchSound(int lastweap, int newweap) {
 				return;
 		}
 	} else {
-		return;
+		if(newweap == WP_PANZERFAUST) {
+			int i = crandom() * 6;
+			i = i % 5;
+			
+			switch(i) {
+				case 0:
+					switchsound = cgs.media.kirbyswitchsound1;
+					break;
+				case 1:
+					switchsound = cgs.media.kirbyswitchsound2;
+					break;
+				case 2:
+					switchsound = cgs.media.kirbyswitchsound3;
+					break;
+				case 3:
+					switchsound = cgs.media.kirbyswitchsound4;
+					break;
+				case 4:
+					switchsound = cgs.media.kirbyswitchsound5;
+					break;
+				case 5:
+					switchsound = cgs.media.kirbyswitchsound6;
+					break;
+				default:
+					switchsound = cgs.media.kirbyswitchsound5;
+			}			
+		}
 	}
 
 	trap_S_StartSound (NULL, cg.snap->ps.clientNum, CHAN_WEAPON, switchsound );

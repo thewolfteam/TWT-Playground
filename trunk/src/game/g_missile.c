@@ -2231,13 +2231,15 @@ gentity_t *fire_rocket (gentity_t *self, vec3_t start, vec3_t dir) {
 		bolt->methodOfDeath = MOD_PANZERFAUST;
 		bolt->splashMethodOfDeath = MOD_PANZERFAUST;
 		//	bolt->clipmask = MASK_SHOT;
-		bolt->clipmask = MASK_MISSILESHOT;
+		bolt->clipmask = MASK_MISSILESHOT;		
 
-		bolt->s.pos.trType = g_panzersGravity.integer ? TR_GRAVITY_LOW : TR_LINEAR;
+		bolt->s.eFlags = EF_BOUNCE;
+		bolt->s.pos.trType = g_panzersGravity.integer ? TR_GRAVITY_LOW : TR_GRAVITY;
 		bolt->s.pos.trTime = level.time - MISSILE_PRESTEP_TIME;		// move a bit on the very first frame
 		VectorCopy( start, bolt->s.pos.trBase );
 		// JPW NERVE
-		VectorScale(dir, g_panzersSpeed.integer, bolt->s.pos.trDelta);
+		//VectorScale(dir, g_panzersSpeed.integer, bolt->s.pos.trDelta);
+		VectorScale(dir, 800, bolt->s.pos.trDelta); // TODO hardcoded 800 instead of g_panzersSpeed.integer
 		// jpw
 		SnapVector( bolt->s.pos.trDelta );			// save net bandwidth
 		VectorCopy (start, bolt->r.currentOrigin);

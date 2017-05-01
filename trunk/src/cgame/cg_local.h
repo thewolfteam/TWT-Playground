@@ -1697,6 +1697,13 @@ typedef struct {
 	sfxHandle_t	selectSound;
 	sfxHandle_t	landHurt;
 
+	sfxHandle_t kirbyswitchsound1;
+	sfxHandle_t kirbyswitchsound2;
+	sfxHandle_t kirbyswitchsound3;
+	sfxHandle_t kirbyswitchsound4;
+	sfxHandle_t kirbyswitchsound5;
+	sfxHandle_t kirbyswitchsound6;
+
 	sfxHandle_t	footsteps[FOOTSTEP_TOTAL][4];
 	sfxHandle_t	sfx_rockexp;
 	sfxHandle_t	sfx_rockexpDist;
